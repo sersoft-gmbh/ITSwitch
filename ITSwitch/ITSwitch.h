@@ -8,6 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+extern NSBindingName NSBindingNameChecked;
+
 /**
  *  ITSwitch is a replica of UISwitch for Mac OS X
  */
@@ -22,11 +26,13 @@ IB_DESIGNABLE
 /**
  *  @property tintColor - Gets or sets the switches tint
  */
-@property (nonatomic, strong) IBInspectable NSColor *tintColor;
+@property (nonatomic, strong, null_resettable) IBInspectable NSColor *tintColor;
 
 /**
  *  @property disabledBorderColor - Define the switch's border color for disabled state.
  */
-@property (nonatomic, strong) IBInspectable NSColor *disabledBorderColor;
+@property (nonatomic, strong, null_resettable) IBInspectable NSColor *disabledBorderColor;
 
 @end
+
+NS_ASSUME_NONNULL_END
